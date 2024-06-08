@@ -31,3 +31,24 @@ Data rate refers to the speed at which data is transmitted over the wireless net
 A beacon is a type of frame sent by an AP at regular intervals to announce the presence of the network.
   * Purpose: Helps devices locate and connect to the network.
   * Contents: Includes SSID, supported data rates, and other network information.
+
+# Wireless Operating Modes
+## 1. Managed Mode (Station Mode)
+ * Default Mode: Used by client devices to connect to WiFi networks.
+ * Behavior: Receives only packets addressed to it or broadcast by the network it’s connected to.
+## 2. Monitor Mode
+ * Packet Capture: Captures all wireless packets in the vicinity, not just those intended for the device.
+ * Uses: Packet sniffing, network diagnostics, and security testing.
+ * Key features and benefits:
+    - Complete Packet Capture
+    - Passive Monitoring
+    - Network Analysis
+    - Security Assessment
+    - Traffic Analysis
+ * How to:
+    - List all avalaible wireless interface `airmon-ng`
+    - Start monitor mode `airmon-ng start <interface>`
+    - Stop monitor mode `airmon-ng stop <monitor_interface>`, check the monitor_interface with `iwconfig`
+## 3. Promiscuous Mode
+ * Context: Used in wired networks to capture all packets.
+ * WiFi Relevance: Less commonly used in wireless because monitor mode provides a superset of promiscuous mode functionality.
